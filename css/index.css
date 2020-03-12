@@ -1,5 +1,46 @@
 body {
-    background-color: blueviolet;
-    color: currentColor;
-    font: 1em helvetica, arial, sans-serif;
+    font: 18px helvetica, arial, sans-serif;
+    background-color: #fff;
+    color: #222;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  margin: 16px;
+}
+
+h1{
+    font-size: 50px;    
+}
+
+h4{
+    font-size: 20px;
+}
+
+h5{
+  opacity: 50%;
+}
+
+li{
+    text-transform: capitalize;
+  }
+
+img {
+  height: auto;
+  width: 100%;
+  margin-top: 10px;
+}
+
+section {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background-color: #DCDCDC;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px grey;
+}
+
+li {
+  list-style-type: none;
+  padding: 15px;
 }
