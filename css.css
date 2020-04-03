@@ -1,0 +1,370 @@
+    
+html,
+body {
+    margin: 0
+}
+
+body {
+    font-family: sans-serif
+}
+
+a {
+    text-decoration: none
+}
+
+h2 {
+    font-size: 24px;
+    margin: 50px 0;
+    border-bottom: 1px solid #4cbb17
+}
+
+h2:before {
+    display: block;
+    content: " ";
+    margin-top: -110px;
+    height: 110px;
+    visibility: hidden
+}
+
+h2 a {
+    display: inline-block;
+    padding: 5px 30px;
+    color: #fff;
+    background-color: #4cbb17
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px
+}
+
+.icon-path {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
+.page-content {
+    display: inline-block;
+    margin: 80px 50px 30px
+}
+
+.page-content:before,
+.page-content:after {
+    position: fixed;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 30px;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none
+}
+
+.page-content:before {
+    top: 80px;
+    background-image: -webkit-linear-gradient(#fff, rgba(255, 255, 255, 0));
+    background-image: linear-gradient(#fff, rgba(255, 255, 255, 0))
+}
+
+.page-content:after {
+    bottom: 0;
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), #fff);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), #fff)
+}
+
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #2D353F;
+    text-align: center;
+    z-index: 2
+}
+
+.page-nav {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    height: 40px;
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #4cbb17
+}
+
+.page-nav.nav-open:before,
+.page-nav.nav-open:after {
+    opacity: 0;
+    -webkit-transition: 0s 0s;
+    transition: 0s 0s
+}
+
+.page-nav.nav-open nav a:hover {
+    background-color: rgba(255, 255, 255, 0.05)
+}
+
+.page-nav.nav-open nav a:focus {
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+.page-nav.nav-open .nav-arrow {
+    opacity: 0;
+    pointer-events: none
+}
+
+.page-nav:before,
+.page-nav:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 30%;
+    opacity: 1;
+    z-index: 1;
+    pointer-events: none;
+    -webkit-transition: 0s 0.5s;
+    transition: 0s 0.5s
+}
+
+.page-nav:before {
+    top: 0;
+    background-image: -webkit-linear-gradient(#4cbb17, rgba(66, 123, 171, 0));
+    background-image: linear-gradient(#4cbb17, rgba(66, 123, 171, 0))
+}
+
+.page-nav:after {
+    bottom: 0;
+    background-image: -webkit-linear-gradient(rgba(66, 123, 171, 0), #4cbb17);
+    background-image: linear-gradient(rgba(66, 123, 171, 0), #4cbb17)
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+nav a {
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    outline: none
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 40px;
+    z-index: 2;
+    -webkit-transition: 0.3s opacity;
+    transition: 0.3s opacity;
+    outline: none
+}
+
+.nav-arrow.nav-arrow-left {
+    left: 0
+}
+
+.nav-arrow.nav-arrow-right {
+    right: 0
+}
+
+.nav-arrow.nav-arrow-disabled {
+    opacity: 0.2
+}
+
+.nav-arrow:not(.nav-arrow-disabled) {
+    cursor: pointer
+}
+
+.nav-arrow:not(.nav-arrow-disabled):hover {
+    background-color: rgba(255, 255, 255, 0.05)
+}
+
+.nav-arrow:not(.nav-arrow-disabled):focus {
+    background-color: rgba(0, 0, 0, 0.05)
+}
+
+
+
+.fixed {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  bottom: 0px
+}
+
+
+.progress-bar 
+{
+    position: relative;
+    width: 100%;
+    height: 3em;
+    background-color: #111;
+    color: white;
+}
+
+.progress-bar::before 
+{
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .5em;
+    top: .5em;
+    bottom: .5em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(100% - 1em);
+    background-color: #4cbb17;
+    padding: 1em;
+}
+
+
+
+
+        
+        .carousel {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3, 
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+    opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
